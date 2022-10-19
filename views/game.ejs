@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="stylesheets/styleGame.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <a href="/welcome_player">
+            <i class="fas fa-chevron-left fa-2x">
+            </i>
+        </a>
+        <img src="/images/logo.jpg" alt="logo">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <div class="healthStat">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+    </header>
+
+
+    <section class="game-container">
+        <!-- Player Part -->
+        <div class="player">
+
+            <h1>
+                <%= player.dataValues.user_name %>
+            </h1>
+            <div class="player-suit" name="player-choice">
+                <button class="ply-button">
+                    <img src="/images/batu.png" alt="Rock">
+                </button>
+                <button class="ply-button">
+                    <img src="/images/kertas.png" alt="Paper">
+                </button>
+                <button class="ply-button">
+                    <img src="/images/gunting.png" alt="Scissors">
+                </button>
+            </div>
+        </div>
+
+        <form action="/game" method="post">
+            <!-- Result  -->
+            <div class="info">
+                <div class="result">
+                    <h3>VS</h3>
+                </div>
+                <button type="submit" class="refresh">
+                    <img src="/images/refresh.png" alt="refresh">
+                </button>
+            </div>
+
+            <!-- Computer Part -->
+            <div class="computer" id="computer">
+                <h1>COM</h1>
+                <ul class="computer-suit">
+                    <li>
+                        <img src="/images/batu.png" alt="Rock">
+                    </li>
+                    <li>
+                        <img src="/images/kertas.png" alt="Paper">
+                    </li>
+                    <li>
+                        <img src="/images/gunting.png" alt="Scissors">
+                    </li>
+                </ul>
+            </div>
+    </section>
+
+    <section class="score">
+        <!-- <h4>LATEST SCORE : </h4>
+            <p>
+                <%= player.dataValues.score%>
+            </p> -->
+        <h4>SCORE :</h4>
+        <input type="text" name="score" id="score" value="0">
+    </section>
+    </form>
+    <script src="/javascripts/scriptGame.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #9b835f;
+  font-family: "Open Sans", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  color: rgb(240, 186, 37);
+  margin: 2vh 2vw;
+  text-align: center;
+}
+
+header i {
+  color: rgb(51, 35, 6);
+  margin-right: 1vw;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+header img {
+  margin-right: 2vw;
+  margin-left: 1vw;
+  height: 5vh;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.healthStat {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin: auto;
+}
+
+.healthStat i {
+  color: #bd2116;
+  font-size: 22px;
+}
+
+/* GAME CONTAINER */
+.game-container {
+  width: 70%;
+  height: 80vh;
+  margin: auto;
+  margin-top: 5vh;
+  display: flex;
+}
+
+/* PLAYER CONTAINER */
+.player {
+  flex: 1;
+  margin: 10px 10px;
+}
+.player h1 {
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 5px 0;
+  width: auto;
+}
+
+.player-suit {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.player-suit button {
+  margin: auto;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  width: 150px;
+  padding: 20px 20px;
+  background-color: transparent;
+}
+
+.player-suit button img {
+  height: 12vh;
+}
+
+.player-suit button:nth-child(1) img {
+  height: 10vh;
+}
+
+/* END PLAYER GAME */
+
+form {
+  display: flex;
+}
+
+/* RESULT AND REFRESH */
+.info {
+  margin: 10px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 180px;
+  margin-top: -45px;
+}
+
+.result {
+  margin: auto;
+}
+
+.result h3 {
+  font-size: 70px;
+  letter-spacing: 2px;
+  background-color: none;
+  color: maroon;
+  padding: 20px 20px;
+  width: 20vw;
+  border-radius: 5%;
+}
+
+.refresh {
+  cursor: pointer;
+  background: transparent;
+  border-style: none;
+}
+
+.refresh img {
+  height: 8vh;
+  margin: auto;
+}
+/* END RESULT AND REFRESH */
+
+/* COMPUTER PART */
+.computer {
+  flex: 1;
+  margin: 10px 10px;
+}
+.computer h1 {
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.computer-suit {
+  list-style: none;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.computer-suit li {
+  margin: auto;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10%;
+  width: 150px;
+  padding: 20px 20px;
+}
+
+.computer-suit li img {
+  height: 12vh;
+}
+
+.computer-suit li:nth-child(1) img {
+  height: 10vh;
+}
+/* END OF COMPUTER */
+
+/* SCORE */
+.score {
+  display: flex;
+  margin-left: 2vw;
+}
+
+.score input {
+  margin-left: 1vw;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+/* END SCORE */
+
+/* RESPONSIVE */
+
+@media (max-width: 720px) {
+  header {
+    margin: 2vh 5vw;
+  }
+
+  header h1 {
+    font-size: 23px;
+    margin: auto;
+  }
+
+  .healthStat i {
+    font-size: 15px;
+  }
+
+  .game-container {
+    width: 80%;
+  }
+
+  .player {
+    margin: auto;
+    margin-right: 20px;
+  }
+
+  .player h1 {
+    font-size: 18px;
+  }
+
+  .player-suit button {
+    width: 120px;
+  }
+
+  .player-suit button img {
+    height: 10vh;
+  }
+
+  .player-suit button:nth-child(1) img {
+    height: 8vh;
+  }
+
+  .result h3 {
+    font-size: 50px;
+    margin: auto;
+  }
+
+  .refresh img {
+    height: 5vh;
+    margin: auto;
+  }
+
+  .computer {
+    margin: auto;
+    margin-left: 20px;
+  }
+  .computer h1 {
+    font-size: 18px;
+  }
+
+  .computer-suit li {
+    width: 120px;
+  }
+
+  .computer-suit li img {
+    height: 10vh;
+  }
+
+  .computer-suit li:nth-child(1) img {
+    height: 8vh;
+  }
+}
+
+@media (max-width: 520px) {
+  header {
+    margin: 2vh 5vw;
+  }
+
+  header img {
+    margin: auto;
+    margin-left: 5px;
+    font-size: 10px;
+  }
+
+  header h1 {
+    font-size: 15px;
+    margin: auto;
+    margin-left: 2vw;
+  }
+
+  .healthStat i {
+    color: #bd2116;
+    font-size: 12px;
+  }
+
+  .game-container {
+    width: 100%;
+  }
+
+  .player {
+    margin: auto;
+    margin-left: 20px;
+  }
+
+  .player h1 {
+    font-size: 12px;
+  }
+
+  .player-suit button {
+    width: 85px;
+    padding: 15px 5px;
+  }
+
+  .player-suit button img {
+    height: 8vh;
+  }
+
+  .player-suit button:nth-child(1) img {
+    height: 6vh;
+  }
+
+  .result h3 {
+    font-size: 40px;
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  .computer {
+    margin: auto;
+    margin-right: 20px;
+  }
+  .computer h1 {
+    font-size: 12px;
+  }
+
+  .computer-suit li {
+    width: 85px;
+    padding: 15px 5px;
+  }
+
+  .computer-suit li img {
+    height: 8vh;
+  }
+
+  .computer-suit li:nth-child(1) img {
+    height: 6vh;
+  }
+
+  .score input .score h4 {
+    font-size: 18px;
+  }
+}
